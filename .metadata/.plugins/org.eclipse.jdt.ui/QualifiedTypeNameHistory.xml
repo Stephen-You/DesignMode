@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.you.weather.observer.Observer"/>
+<fullyQualifiedTypeName name="com.you.weather.observer.WeatherData"/>
+<fullyQualifiedTypeName name="com.you.weather.observer.ConcreteObserver"/>
+<fullyQualifiedTypeName name="com.you.weather.observer.Subject"/>
+<fullyQualifiedTypeName name="java.util.Observer"/>
+<fullyQualifiedTypeName name="com.you.weather.observer.DisplayElement"/>
+<fullyQualifiedTypeName name="java.util.Observable"/>
+<fullyQualifiedTypeName name="com.you.weather.observer.api.WeatherData"/>
+<fullyQualifiedTypeName name="com.you.weather.observer.api.ConcreteObserver"/>
+<fullyQualifiedTypeName name="com.you.duck.practice.FlyBehavior"/>
+<fullyQualifiedTypeName name="com.you.duck.practice.QuackBehavior"/>
+<fullyQualifiedTypeName name="com.you.duck.practice.ADuck"/>
+<fullyQualifiedTypeName name="com.you.duck.practice.FlyWithWings"/>
+<fullyQualifiedTypeName name="com.you.duck.practice.Duck"/>
+<fullyQualifiedTypeName name="com.you.duck.practice.BDuck"/>
+<fullyQualifiedTypeName name="com.you.duck.practice.Quack"/>
+</qualifiedTypeNameHistroy>

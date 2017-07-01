@@ -1,0 +1,5 @@
+package com.you.weather.observer.api;
+
+public class WeatherData {
+
+}

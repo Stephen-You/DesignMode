@@ -1,0 +1,32 @@
+package com.you.weather.observer.api;
+
+import java.util.Observable;
+import java.util.Observer;
+
+import com.you.weather.observer.DisplayElement;
+import com.you.weather.observer.Subject;
+
+public class ConcreteObserver implements Observer,DisplayElement{
+	private float temperature;
+	private float humidiry;
+	//用来和主题绑定连接,用于注册和取消
+	private Observable observable;
+	
+	public ConcreteObserver(Observable observable) {
+		this.observable = observable;
+		observable.addObserver(this);
+	}
+
+	@Override
+	public void display() {
+		System.out.println();
+		
+	}
+
+	@Override
+	public void update(Observable o, Object arg) {
+		//继承接口中的update方法
+		
+	}
+
+}

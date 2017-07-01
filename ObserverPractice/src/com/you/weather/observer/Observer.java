@@ -1,0 +1,6 @@
+package com.you.weather.observer;
+
+public interface Observer {
+	//所有的观察者都必须实现update方法,以实现观察者接口
+	public void update(float temp,float humidity,float pressure);
+}

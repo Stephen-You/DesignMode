@@ -1,0 +1,5 @@
+package com.you.weather.observer;
+
+public interface Observer {
+
+}

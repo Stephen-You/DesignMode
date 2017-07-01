@@ -1,0 +1,52 @@
+package com.you.weather.observer;
+
+import java.util.ArrayList;
+/**
+ * 观察者模式:定义了对象之间的一对多依赖,这样一来当一个对象改变状态时,他的所有依赖者都会收到通知并自动更新
+ * 观察者模式的实现方式有推和拉两种,但一般我们多使用推(Subject Observer),下面我们看一下推的入门
+ * @author Yorick
+ */
+public class WeatherData implements Subject{
+	//定义一个ArrayList来记录观察表
+	private ArrayList observers;
+	//定义三个变量作为天气数据
+	private float temperature;
+	private float humidiry;
+	private float pressure;
+	//在构造器中建立ArrayList
+	public WeatherData(ArrayList observers) {
+		this.observers = new ArrayList<>();
+	}
+	@Override
+	public void registerObserver(Observer o) {
+		//把观察者添加到观察者表
+		observers.add(o);
+	}
+	@Override
+	public void removeObserver(Observer o) {
+		//从观察者表删除观察者
+		observers.remove(o);
+	}
+	@Override
+	public void notifyObserver() {
+		//主题状态改变通知所有的观察者
+		for (int i = 0; i < observers.size(); i++) {
+			Observer observer = (Observer) observers.get(i);
+			observer.update(temperature, humidiry, pressure);
+		}
+	}
+	
+	//WeatherData自己的行为,当成气象站获取到数据时,通知观察者
+	public void measurements(){
+		notifyObserver();
+	}
+	//从气象站获取数据
+	public void setMeasurements(float temperatur,float humidiry,float pressure){
+		this.temperature = temperatur;
+		this.humidiry = humidiry;
+		this.pressure = pressure;
+		//数据变化通知观察者
+		measurements();
+	}
+	
+}

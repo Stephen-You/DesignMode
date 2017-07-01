@@ -1,0 +1,10 @@
+package com.you.duck.practice;
+
+public class BDuck extends Duck{
+
+	@Override
+	public void display() {
+		System.out.println("BDuck!");
+	}
+	
+}

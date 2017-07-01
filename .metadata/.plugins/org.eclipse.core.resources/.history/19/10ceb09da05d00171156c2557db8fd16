@@ -1,0 +1,33 @@
+package com.you.weather.observer;
+
+import java.util.ArrayList;
+
+public class WeatherData implements Subject{
+	//定义一个ArrayList来记录观察表
+	private ArrayList observers;
+	//定义三个变量作为天气数据
+	private float temperature;
+	private float humidiry;
+	private float pressure;
+	//在构造器中建立ArrayList
+	public WeatherData(ArrayList observers) {
+		this.observers = new ArrayList<>();
+	}
+	@Override
+	public void registerObserver(Observer o) {
+		//把观察者添加到观察者表
+		observers.add(o);
+	}
+	@Override
+	public void removeObserver(Observer o) {
+		//从观察者表删除观察者
+		observers.remove(o);
+	}
+
+	@Override
+	public void notifyObserver() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
